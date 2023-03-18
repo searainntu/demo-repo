@@ -3,14 +3,14 @@ clc;
 num=[260 270 280 290 300,310,320];
 % optimal=[5309/7711 5705/7711 5700/7711 6121/7711 6067/7711 ]; 
 optimal=[0.8581 0.8593 0.9067 0.9291 0.96696,0.9105,0.972899 ]; 
- xconf = [num num(end:-1:1)] ;%¹¹ÔìÕý·´ÏòµÄxÖµ£¬×÷ÎªÖÃÐÅÇø¼äµÄºá×ø±êÖµ
-%  yconf = [optimal+0.02 optimal(end:-1:1)-0.02];%¹¹Ôìy·½ÏòµÄÉÏÏÂ·¶Î§£¬×÷ÎªÖÃÐÅÇø¼äµÄ×Ý×ø±êÖµ ?
-  yconf = [optimal optimal(end:-1:1)]+[0.01224,0.04152,0.03379,0.01898,0.00789,0.040357,0.0335569,-0.0335569,-0.040357,-0.00789,-0.01898,-0.03379,-0.04152 ,-0.01224];%¹¹Ôìy·½ÏòµÄÉÏÏÂ·¶Î§£¬×÷ÎªÖÃÐÅÇø¼äµÄ×Ý×ø±êÖµ ?
+ xconf = [num num(end:-1:1)] ;%æž„é€ æ­£åå‘çš„xå€¼ï¼Œä½œä¸ºç½®ä¿¡åŒºé—´çš„æ¨ªåæ ‡å€¼
+%  yconf = [optimal+0.02 optimal(end:-1:1)-0.02];%æž„é€ yæ–¹å‘çš„ä¸Šä¸‹èŒƒå›´ï¼Œä½œä¸ºç½®ä¿¡åŒºé—´çš„çºµåæ ‡å€¼ ?
+  yconf = [optimal optimal(end:-1:1)]+[0.01224,0.04152,0.03379,0.01898,0.00789,0.040357,0.0335569,-0.0335569,-0.040357,-0.00789,-0.01898,-0.03379,-0.04152 ,-0.01224];%æž„é€ yæ–¹å‘çš„ä¸Šä¸‹èŒƒå›´ï¼Œä½œä¸ºç½®ä¿¡åŒºé—´çš„çºµåæ ‡å€¼ ?
   figure
   hold on
- p = fill(xconf,yconf,'red');%¶¨ÒåÌî³äÇø¼ä
- p.FaceColor = [0.8 0.8 0.8];%¶¨ÒåÇø¼äµÄÌî³äÑÕÉ«      
- p.EdgeColor = 'none';%¶¨ÒåÇø¼ä±ß½çµÄÌî³äÑÕÉ«£¬´Ë´¦²»ÉèÖÃ ?
+ p = fill(xconf,yconf,'red');%å®šä¹‰å¡«å……åŒºé—´
+ p.FaceColor = [0.8 0.8 0.8];%å®šä¹‰åŒºé—´çš„å¡«å……é¢œè‰²      
+ p.EdgeColor = 'none';%å®šä¹‰åŒºé—´è¾¹ç•Œçš„å¡«å……é¢œè‰²ï¼Œæ­¤å¤„ä¸è®¾ç½® ?
  %p.FaceAlpha = 0.2; 
  
 % gpsr=[3.4558 2.90852 2.9581 2.2274 2.39666  ].*10^-1;
@@ -25,3 +25,4 @@ xlabel('Signal transmission radius (m)')
 ylabel('Packet delivery ratio')
 grid on
 legend('confidence interval','Proposed Scheme','GPSR','GSR')
+fjdaksljjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjs
